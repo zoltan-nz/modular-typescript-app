@@ -48,3 +48,21 @@ Add custom configuration options to `tsconfig.json`:
   "exclude": [ "node_modules", "**/*-test.ts" ]
 }
 ```
+
+Add custom npm scripts:
+
+```
+"scripts": {
+    "clean": "del ./dist",
+    "lint": "tslint --project ./tsconfig.json --fix",
+    "build": "tsc",
+    "test": "jest",
+    "server": "node ./dist/index.js",
+    "watch:build": "tsc --watch",
+    "watch:lint": "chokidar ./**/*.ts --initial --silent -c 'npm -s run lint'",
+    "watch:test": "CI=true jest --watch",
+    "watch:server": "nodemon -w ./ -x npm run server",
+    "dev": "concurrently --names 'BUILD,TEST,LINT,SERVER' -c 'yello,cyan,blue,magenta' 'npm run watch:build' 'npm run watch:test' 'npm run watch:lint' 'npm run watch:server'",
+    "start": "npm run clean && npm run lint && npm run build && npm run server"
+  },
+```
