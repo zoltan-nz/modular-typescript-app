@@ -66,3 +66,17 @@ Add custom npm scripts:
     "start": "npm run clean && npm run lint && npm run build && npm run server"
   },
 ```
+
+Add basic packages:
+
+```
+$ npm i -S express, chalk, debug
+$ npm i -D @types/express, @types/debug
+```
+
+Add basic express app files:
+
+* `src/bin/launcher.ts`
+* `src/app.ts`
+* `src/app-router.ts`
+* `src/app-server.ts`
