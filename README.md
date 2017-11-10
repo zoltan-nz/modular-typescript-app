@@ -80,3 +80,26 @@ Add basic express app files:
 * `src/app.ts`
 * `src/app-router.ts`
 * `src/app-server.ts`
+
+Add more package
+
+* morgan
+* body-parser
+
+Add jest config to `package.json`
+
+```
+"jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ]
+  }
+```
