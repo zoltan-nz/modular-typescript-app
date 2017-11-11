@@ -1,6 +1,6 @@
 import { Application } from 'express';
 // import parserRoute from './routes/parser';
-// import rootRoute from './routes/root';
+import rootRoute from './routes/root';
 
 /**
  * Setup routes for the express application.
@@ -8,6 +8,6 @@ import { Application } from 'express';
  * @param {Application} app
  */
 export default function(app: Application) {
-  // app.use('/', rootRoute);
+  app.use('/', rootRoute);
   // app.use('/api/parser', parserRoute);
 }

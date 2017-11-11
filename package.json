@@ -11,8 +11,9 @@
     "server": "node ./dist/bin/launcher.js",
     "watch:build": "tsc --watch",
     "watch:lint": "chokidar ./**/*.ts --initial --silent -c 'npm -s run lint'",
-    "watch:test": "CI=true jest --watch",
+    "watch:test": "CI=true jest --watchAll",
     "watch:server": "nodemon -w ./ -x npm run server",
+    "debug": "NODE_ENV=development DEBUG=* ts-node --inspect-brk src/bin/launcher.ts",
     "dev": "concurrently --names 'BUILD,TEST,LINT,SERVER' -c 'yello,cyan,blue,magenta' 'npm run watch:build' 'npm run watch:test' 'npm run watch:lint' 'npm run watch:server'",
     "start": "npm run clean && npm run lint && npm run build && npm run server"
   },
@@ -52,18 +53,6 @@
     "debug": "^3.1.0",
     "express": "^4.16.2",
     "morgan": "^1.9.0"
-  },
-  "jest": {
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json"
-    ]
   }
+
 }

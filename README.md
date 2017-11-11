@@ -103,3 +103,30 @@ Add jest config to `package.json`
     ]
   }
 ```
+
+Setup gracefully shutdown for express server with listening on `SIGINT` event.
+
+```
+  process.on('SIGINT', () => shutdownServerGracefully(server));
+  ...
+  
+function shutdownServerGracefully(server: Server): void {
+  info(green('Shutdown Express Server gracefully...'));
+  server.close(() => info(green('...closed')));
+}  
+```
+
+Add some `lib` to `tsconfig.json` to deal with lint expectations: `"lib": ["es2015.promise", "es2017"],`.
+
+Add new linter rule: `"promise-function-async": true`
+
+Add jest configuration to `jest.config.js`:
+
+```
+module.exports = {
+  moduleFileExtensions: [ "ts", "tsx", "js", "jsx", "json" ],
+  testRegex: "(^__tests__/.*|(\\.|/)(test|spec))\\.(ts)$",
+  transform: { "^.+\\.tsx?$": "ts-jest" },
+  verbose: true,
+};
+```

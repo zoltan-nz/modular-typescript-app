@@ -12,7 +12,9 @@
     "no-unused-expression": false,
     "variable-name": false,
     "no-implicit-dependencies": false,
-    "no-namespace": false
+    "no-namespace": false,
+    "promise-function-async": true,
+    "no-empty-interface": false
   },
   "rulesDirectory": [ ]
 }

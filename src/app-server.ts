@@ -1,11 +1,12 @@
 import chalk from 'chalk';
-import { error } from 'console';
+import { error, info } from 'console';
 import * as debug from 'debug';
 import { Application } from 'express';
 import { createServer, Server } from 'http';
+import * as process from 'process';
 import { exit } from 'process';
 
-const { red } = chalk;
+const { red, green } = chalk;
 
 const ERROR_CODES = {
   inUse: 'EADDRINUSE',
@@ -22,6 +23,7 @@ const ERROR_CODES = {
 export default function(app: Application, port: number = 3000): Server {
   const server: Server = createServer(app);
 
+  process.on('SIGINT', () => shutdownServerGracefully(server));
   server.listen(port);
   server.on('error', err => onError(err, port));
   server.on('listening', () => onListening(server));
@@ -57,4 +59,9 @@ function elevatedPrivilegesRequired(port: number) {
 function alreadyInUse(port: number) {
   error(red(`PORT ${port} is already in use`));
   exit(1);
+}
+
+function shutdownServerGracefully(server: Server): void {
+  info(green('Shutdown Express Server gracefully...'));
+  server.close(() => info(green('...closed')));
 }

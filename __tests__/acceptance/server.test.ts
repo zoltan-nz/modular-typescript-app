@@ -4,11 +4,22 @@ import App from '../../src/app';
 import router from '../../src/app-router';
 import Server from '../../src/app-server';
 
-const app = App('test');
-router(app);
-const server = Server(app);
+import * as express from 'express';
+import { Server as ServerType } from 'http';
+
+let app: express.Application;
+let server: ServerType;
 
 describe('Server is running', () => {
+  beforeAll(() => {
+    app = App('test');
+    router(app);
+    server = Server(app, 3456);
+  });
+
+  afterAll(() => {
+    server.close();
+  });
 
   test('should respond with OK', async () => {
 
@@ -16,20 +27,16 @@ describe('Server is running', () => {
     expect(res.status).toEqual(200);
   });
 
-  it('should respond with json', () => {
-    // return request(app)
-    //   .get('/')
-    //   .then(res => expect(res).to.be.json);
+  it('should respond with json', async () => {
+
+    const res = await request(server).get('/');
+    expect(res.type).toBe('application/json');
   });
 
-  it('should respond with message', () => {
-    // const expectedResponse = JSON.stringify({ message: 'Server is running...' });
-    //
-    // return request(app)
-    //   .get('/')
-    //   .then(res => {
-    //     const response = JSON.stringify(res.body);
-    //     expect(response, expectedResponse);
-    //   });
+  it('should respond with message', async () => {
+    const expectedResponse = { message: 'Server is running...' };
+
+    const res = await request(server).get('/');
+    expect(res.body).toEqual(expectedResponse);
   });
 });

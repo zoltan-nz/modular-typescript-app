@@ -2,6 +2,12 @@ import { json, urlencoded } from 'body-parser';
 import * as express from 'express';
 import * as morgan from 'morgan';
 
+/**
+ * Provide an express application with the given environment settings. Default environment is 'development'.
+ *
+ * @param env
+ * @returns {express.Application}
+ */
 export default function(env: string = 'development'): express.Application {
   const app: express.Application = express();
 
