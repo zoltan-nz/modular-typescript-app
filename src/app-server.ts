@@ -1,9 +1,9 @@
 import chalk from 'chalk';
 import { error, info } from 'console';
-import * as debug from 'debug';
+import debug from 'debug';
 import { Application } from 'express';
 import { createServer, Server } from 'http';
-import * as process from 'process';
+import process from 'process';
 import { exit } from 'process';
 
 const { red, green } = chalk;

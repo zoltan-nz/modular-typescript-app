@@ -1,10 +1,10 @@
-import * as request from 'supertest';
+import request from 'supertest';
 
 import App from '../../src/app';
 import router from '../../src/app-router';
 import Server from '../../src/app-server';
 
-import * as express from 'express';
+import express from 'express';
 import { Server as ServerType } from 'http';
 
 let app: express.Application;

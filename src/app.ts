@@ -1,6 +1,6 @@
 import { json, urlencoded } from 'body-parser';
-import * as express from 'express';
-import * as morgan from 'morgan';
+import express from 'express';
+import morgan from 'morgan';
 
 /**
  * Provide an express application with the given environment settings. Default environment is 'development'.
