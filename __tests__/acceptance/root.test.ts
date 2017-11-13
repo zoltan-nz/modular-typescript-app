@@ -10,7 +10,7 @@ import { Server as ServerType } from 'http';
 let app: express.Application;
 let server: ServerType;
 
-describe('Server is running', () => {
+describe('Root', () => {
   beforeAll(() => {
     app = App('test');
     router(app);
