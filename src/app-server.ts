@@ -3,7 +3,7 @@ import { error, info } from 'console';
 import debug from 'debug';
 import { Application } from 'express';
 import { createServer, Server } from 'http';
-import process from 'process';
+import * as process from 'process';
 import { exit } from 'process';
 
 const { red, green } = chalk;
@@ -17,7 +17,7 @@ const ERROR_CODES = {
  * Launch the app on the given port, default port is 3000.
  *
  * @param {Application} app
- * @param {number} port
+ * @param {number} [port=3000]
  * @returns {Server}
  */
 export default function(app: Application, port: number = 3000): Server {
@@ -31,6 +31,12 @@ export default function(app: Application, port: number = 3000): Server {
   return server;
 }
 
+/**
+ * Called when some error happened with Node.js server
+ *
+ * @param {NodeJS.ErrnoException} exception
+ * @param {number} port
+ */
 function onError(exception: NodeJS.ErrnoException, port: number): void {
   if (exception.syscall !== 'listen') throw exception;
 
@@ -62,6 +68,6 @@ function alreadyInUse(port: number) {
 }
 
 function shutdownServerGracefully(server: Server): void {
-  info(green('Shutdown Express Server gracefully...'));
+  info(green('Shutdown Node.js Server gracefully...'));
   server.close(() => info(green('...closed')));
 }

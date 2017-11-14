@@ -132,4 +132,3 @@ module.exports = {
 ```
 
 Turn on `allowSyntheticDefaultImports` in `tsconfig.json`.
-

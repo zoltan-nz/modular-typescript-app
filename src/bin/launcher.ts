@@ -8,14 +8,16 @@
  * PORT=4100 (default is 3000)
  */
 
-import { stdout } from 'process';
+import { env, stdout } from 'process';
 import App from '../app';
 import router from '../app-router';
 import Server from '../app-server';
 
 stdout.write('Express Typescript App. Start...\n');
 
-const app = App();
+const { NODE_ENV, PORT } = env;
+
+const app = App(NODE_ENV);
 router(app);
 
-const server = Server(app, 3000);
+const server = Server(app, PORT);
