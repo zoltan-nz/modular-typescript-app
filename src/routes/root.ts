@@ -9,8 +9,8 @@ const rootRouter: Router = Router();
 
 rootRouter.get('/', (req: Request, res: Response) => {
   res.json({
-    message: 'Server is running...'
+    message: 'Server is running...',
   });
 });
 
-export default rootRouter;
+export { rootRouter };
