@@ -7,7 +7,7 @@ import { Environment } from './models/environment';
  */
 const createExpressApp = (environment: string): Express => {
   if (!Object.keys(Environment).includes(environment)) {
-    throw Error(`NODE_ENV value is not supported, must have: ${Object.keys(Environment)}`)
+    throw Error(`NODE_ENV value is not supported, must have: ${Object.keys(Environment)}`);
   }
 
   const app = express();

@@ -19,6 +19,8 @@ describe('createExpressApp', () => {
   });
 
   it('should throw an error when non supported environment is used', () => {
-    expect(() => { createExpressApp('not-supported-env'); }).toThrow("NODE_ENV value is not supported, must have: test,development,staging,production");
-  })
+    expect(() => {
+      createExpressApp('not-supported-env');
+    }).toThrow('NODE_ENV value is not supported, must have: test,development,staging,production');
+  });
 });

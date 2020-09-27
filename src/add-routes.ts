@@ -1,6 +1,6 @@
 import { Application } from 'express';
-import { rootRouter } from "./routes/root";
-import { usersRouter } from "./routes/users";
+import { rootRouter } from './routes/root';
+import { usersRouter } from './routes/users';
 
 /**
  * Setup routes for the express application.
@@ -9,7 +9,7 @@ import { usersRouter } from "./routes/users";
  */
 const addRoutes = (app: Application): Application => {
   app.use(rootRouter);
-  app.use(usersRouter)
+  app.use(usersRouter);
 
   return app;
 };

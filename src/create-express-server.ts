@@ -4,7 +4,7 @@ import { Application } from 'express';
 import { createServer, Server } from 'http';
 import process, { exit } from 'process';
 
-const { red, green } = chalk;
+const { red, green, magenta } = chalk;
 
 enum ErrorCode {
   inUse = 'EADDRINUSE',
@@ -89,8 +89,8 @@ function alreadyInUse(portNumber: number) {
  * @param {Server} server
  */
 function shutdownServerGracefully(server: Server): void {
-  info(green('Shutdown Node.js Server gracefully...'));
-  server.close(() => info(green('...closed')));
+  info(magenta('\n-------------\nShutdown Node.js Server gracefully...'));
+  server.close(() => info(magenta('...closed')));
 }
 
 export { createExpressServer };

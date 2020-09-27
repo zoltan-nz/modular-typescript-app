@@ -2,7 +2,7 @@ import { json } from 'body-parser';
 import { Application } from 'express';
 
 /**
- * Provide an express application with the given environment settings. Default environment is 'development'.
+ * Add middlewares to an express application
  *
  * @param {express.Application} app
  * @returns {express.Application}
