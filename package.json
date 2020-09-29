@@ -9,6 +9,7 @@
     "build:watch": "tsc --watch",
     "test": "jest --colors --coverage",
     "test:watch": "CI=true jest --colors --watchAll",
+    "test:compiled": "jest --colors --config ./jest.config.compiled.js",
     "lint": "eslint . --fix",
     "lint:watch": "chokidar ./**/*.ts --initial --silent -c 'run-s lint'",
     "server": "node ./dist/bin/run.js",
