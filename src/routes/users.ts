@@ -1,4 +1,5 @@
-import { Request, Response, Router } from 'express';
+import { Router } from 'express';
+import { getUsers } from '../controllers/users';
 
 /**
  * The main route.
@@ -7,10 +8,6 @@ import { Request, Response, Router } from 'express';
  */
 const usersRouter: Router = Router();
 
-usersRouter.get('/users', (req: Request, res: Response) => {
-  res.json({
-    message: 'Users...',
-  });
-});
+usersRouter.get('/users', getUsers);
 
 export { usersRouter };

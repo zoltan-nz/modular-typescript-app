@@ -1,4 +1,5 @@
-import { Request, Response, Router } from 'express';
+import { Router } from 'express';
+import { sendServerIsRunning } from '../controllers/root';
 
 /**
  * The main route.
@@ -7,10 +8,6 @@ import { Request, Response, Router } from 'express';
  */
 const rootRouter: Router = Router();
 
-rootRouter.get('/', (req: Request, res: Response) => {
-  res.json({
-    message: 'Server is running...',
-  });
-});
+rootRouter.get('/', sendServerIsRunning);
 
 export { rootRouter };

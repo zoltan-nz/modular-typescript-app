@@ -8,8 +8,8 @@ describe('addRoutes', () => {
     addRoutes(app);
 
     expect(listEndpoints(app)).toEqual([
-      { methods: ['GET'], middlewares: ['anonymous'], path: '/' },
-      { methods: ['GET'], middlewares: ['anonymous'], path: '/users' },
+      { methods: ['GET'], middlewares: ['sendServerIsRunning'], path: '/' },
+      { methods: ['GET'], middlewares: ['getUsers'], path: '/users' },
     ]);
   });
 });

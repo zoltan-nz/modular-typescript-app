@@ -15,7 +15,7 @@
     "server": "node ./dist/bin/run.js",
     "server:watch": "nodemon -w ./ -x run-s server",
     "debug": "NODE_ENV=development DEBUG=* ts-node --inspect-brk ./src/bin/run.ts",
-    "dev": "concurrently --names 'BUILD,TEST,LINT,SERVER' -c 'yello,cyan,blue,magenta' 'run-s build:watch' 'run-s test:watch' 'run-s lint:watch' 'run-s server:watch'",
+    "dev": "concurrently --names 'BUILD,TEST,LINT,SERVER' -c 'yellow,cyan,blue,magenta' 'run-s build:watch' 'run-s test:watch' 'run-s lint:watch' 'run-s server:watch'",
     "start": "run-s clean build server",
     "format": "prettier --list-different --write '**/*.{ts,tsx,js,jsx,json,md,html}'",
     "format:check": "prettier --list-different --check '**/*.{ts,tsx,js,jsx,json,md,html}'"
@@ -43,7 +43,6 @@
     "@typescript-eslint/parser": "^4.30.0",
     "chokidar-cli": "^3.0.0",
     "concurrently": "^6.2.1",
-    "del": "^6.0.0",
     "del-cli": "^4.0.1",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
