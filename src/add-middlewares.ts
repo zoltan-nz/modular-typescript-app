@@ -1,5 +1,6 @@
 import { json } from 'body-parser';
 import { Application } from 'express';
+import applyCors from './middlewares/cors';
 
 /**
  * Add middlewares to an express application
@@ -9,6 +10,7 @@ import { Application } from 'express';
  */
 const addMiddlewares = (app: Application): Application => {
   app.use(json());
+  app.use(applyCors);
 
   return app;
 };
