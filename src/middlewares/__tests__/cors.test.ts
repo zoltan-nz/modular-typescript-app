@@ -7,7 +7,7 @@ describe('cors', () => {
   beforeEach(async () => {
     jest.resetModules();
     app = express();
-    app.get('/', (req, res, next) => res.end());
+    app.get('/', (req, res) => res.end());
   });
 
   it('should manage options calls', async () => {
