@@ -1,4 +1,4 @@
-import chalk = require('chalk');
+import chalk from 'chalk';
 import { error, info } from 'console';
 import { Application } from 'express';
 import { createServer, Server } from 'http';

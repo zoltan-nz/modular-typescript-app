@@ -1,6 +1,7 @@
 {
   "name": "express-typescript-app",
   "version": "1.0.0",
+  "type": "commonjs",
   "description": "Express with TypeScript App Template",
   "main": "dist/bin/run.js",
   "scripts": {
@@ -24,7 +25,7 @@
     "type": "git",
     "url": "git+https://github.com/zoltan-nz/express-typescript-app.git"
   },
-  "author": "",
+  "author": "Zoltan",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/zoltan-nz/express-typescript-app/issues"
