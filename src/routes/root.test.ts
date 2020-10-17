@@ -1,6 +1,6 @@
 import express from 'express';
 import request from 'supertest';
-import { rootRouter } from '../root';
+import { rootRouter } from './root';
 
 describe('Routes', () => {
   test('root', async () => {

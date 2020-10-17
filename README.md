@@ -25,7 +25,7 @@ Endpoints:
 /categories/:category_id
   GET
   PUT
-  DELETE  
+  DELETE
 ```
 
 There is many-to-many relation between category and product.

@@ -8,6 +8,6 @@ import { sendServerIsRunning } from '../controllers/root';
  */
 const rootRouter: Router = Router();
 
-rootRouter.get('/', sendServerIsRunning);
+rootRouter.route<'/'>('/').get(sendServerIsRunning);
 
 export { rootRouter };

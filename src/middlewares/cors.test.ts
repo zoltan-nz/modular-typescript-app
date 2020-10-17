@@ -12,7 +12,7 @@ describe('cors', () => {
 
   it('should manage options calls', async () => {
     process.env.ALLOWED_ORIGIN = '*';
-    const { default: applyCors } = await import('../cors');
+    const { default: applyCors } = await import('./cors');
 
     app.use(applyCors);
 
@@ -24,7 +24,7 @@ describe('cors', () => {
 
   it('should setup allowed origin', async () => {
     process.env.ALLOWED_ORIGIN = 'https://allowed';
-    const { default: applyCors } = await import('../cors');
+    const { default: applyCors } = await import('./cors');
 
     app.use(applyCors);
 
@@ -36,7 +36,7 @@ describe('cors', () => {
 
   it('should return undefined for not allowed origin', async () => {
     process.env.ALLOWED_ORIGIN = 'https://allowed';
-    const { default: applyCors } = await import('../cors');
+    const { default: applyCors } = await import('./cors');
 
     app.use(applyCors);
 
@@ -47,7 +47,7 @@ describe('cors', () => {
 
   test('when ALLOWED_ORIGIN env variable is undefined', async () => {
     process.env.ALLOWED_ORIGIN = undefined;
-    const { default: applyCors } = await import('../cors');
+    const { default: applyCors } = await import('./cors');
 
     app.use(applyCors);
 

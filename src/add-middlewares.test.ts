@@ -1,6 +1,6 @@
 import express from 'express';
 import request from 'supertest';
-import { addMiddlewares } from '../add-middlewares';
+import { addMiddlewares } from './add-middlewares';
 
 describe('addMiddlewares', () => {
   test('app can parse json body', async () => {

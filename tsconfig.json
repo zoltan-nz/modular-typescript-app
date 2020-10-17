@@ -22,5 +22,6 @@
     "forceConsistentCasingInFileNames": true,
     "pretty": true,
     "resolveJsonModule": true
-  }
+  },
+  "exclude": ["*.test.ts"]
 }
