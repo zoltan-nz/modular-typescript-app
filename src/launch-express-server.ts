@@ -14,13 +14,8 @@ enum ErrorCode {
 
 const DEFAULT_PORT = '3000';
 
-/**
- * @param {Application} app
- * @param {string} port
- * @returns {Server}
- */
-const launchExpressServer = (app: Application, port?: string): Server => {
-  const portNumber = parseInt(port || DEFAULT_PORT, 10);
+const launchExpressServer = (app: Application, port: string = DEFAULT_PORT): Server => {
+  const portNumber = parseInt(port, 10);
   const server: Server = createServer(app);
 
   process.on(ErrorCode.sigInt, () => shutdownServerGracefully(server));
@@ -31,12 +26,6 @@ const launchExpressServer = (app: Application, port?: string): Server => {
   return server;
 };
 
-/**
- * Called when some error happened with Node.js server
- *
- * @param {NodeJS.ErrnoException} exception
- * @param {number} portNumber
- */
 function onError(exception: NodeJS.ErrnoException, portNumber: number): void {
   if (exception.syscall !== 'listen') throw exception;
 
@@ -52,11 +41,6 @@ function onError(exception: NodeJS.ErrnoException, portNumber: number): void {
   }
 }
 
-/**
- * @param {Server} server
- *
- * istanbul ignore next
- */
 function onListening(server: Server): void {
   const addr = server.address();
 
@@ -68,25 +52,16 @@ function onListening(server: Server): void {
   info(green('Server started on ', addr?.address, addr?.port));
 }
 
-/**
- * @param {number} portNumber
- */
 function elevatedPrivilegesRequired(portNumber: number) {
   error(red(`Using PORT ${portNumber} requires elevated privileges`));
   exit(1);
 }
 
-/**
- * @param {number}portNumber
- */
 function alreadyInUse(portNumber: number) {
   error(red(`PORT ${portNumber} is already in use`));
   exit(1);
 }
 
-/**
- * @param {Server} server
- */
 function shutdownServerGracefully(server: Server): void {
   info(magenta('\n-------------\nShutdown Node.js Server gracefully...'));
   server.close(() => info(magenta('...closed')));

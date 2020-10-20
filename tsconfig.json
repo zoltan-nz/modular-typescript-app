@@ -23,5 +23,6 @@
     "pretty": true,
     "resolveJsonModule": true
   },
-  "exclude": ["*.test.ts"]
+  "include": ["./src/**/*.ts"],
+  "exclude": ["./src/**/*.test.ts", "./src/**/*.d.ts", "./dist/**"]
 }

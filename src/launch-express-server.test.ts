@@ -7,5 +7,6 @@ describe('launchExpressServer', () => {
     const app = express();
     const server = launchExpressServer(app, '0');
     expect(server).toBeInstanceOf(Server);
+    server.close();
   });
 });
