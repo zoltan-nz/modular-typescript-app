@@ -19,7 +19,7 @@ const DEFAULT_PORT = '3000';
  * @param {string} port
  * @returns {Server}
  */
-const createExpressServer = (app: Application, port?: string): Server => {
+const launchExpressServer = (app: Application, port?: string): Server => {
   const portNumber = parseInt(port || DEFAULT_PORT, 10);
   const server: Server = createServer(app);
 
@@ -54,6 +54,8 @@ function onError(exception: NodeJS.ErrnoException, portNumber: number): void {
 
 /**
  * @param {Server} server
+ *
+ * istanbul ignore next
  */
 function onListening(server: Server): void {
   const addr = server.address();
@@ -67,7 +69,6 @@ function onListening(server: Server): void {
 }
 
 /**
- *
  * @param {number} portNumber
  */
 function elevatedPrivilegesRequired(portNumber: number) {
@@ -76,7 +77,6 @@ function elevatedPrivilegesRequired(portNumber: number) {
 }
 
 /**
- *
  * @param {number}portNumber
  */
 function alreadyInUse(portNumber: number) {
@@ -85,7 +85,6 @@ function alreadyInUse(portNumber: number) {
 }
 
 /**
- *
  * @param {Server} server
  */
 function shutdownServerGracefully(server: Server): void {
@@ -93,4 +92,4 @@ function shutdownServerGracefully(server: Server): void {
   server.close(() => info(magenta('...closed')));
 }
 
-export { createExpressServer };
+export { launchExpressServer };

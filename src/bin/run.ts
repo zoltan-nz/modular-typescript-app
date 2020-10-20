@@ -13,7 +13,7 @@ import { env } from 'process';
 import { addMiddlewares } from '../add-middlewares';
 import { addRoutes } from '../add-routes';
 import { createExpressApp } from '../create-express-app';
-import { createExpressServer } from '../create-express-server';
+import { launchExpressServer } from '../launch-express-server';
 import { Environment } from '../models/environment';
 
 console.log('Express Typescript App. Start...\n');
@@ -30,4 +30,4 @@ if (app.get('env') === Environment.development) {
   console.info(listEndpoints(app));
 }
 
-createExpressServer(app, PORT);
+launchExpressServer(app, PORT);
