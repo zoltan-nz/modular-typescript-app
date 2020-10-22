@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import chalk from 'chalk';
 import { error, info } from 'console';
 import { Application } from 'express';
@@ -26,6 +27,7 @@ const launchExpressServer = (app: Application, port: string = DEFAULT_PORT): Ser
   return server;
 };
 
+/* istanbul ignore next */
 function onError(exception: NodeJS.ErrnoException, portNumber: number): void {
   if (exception.syscall !== 'listen') throw exception;
 
@@ -41,6 +43,7 @@ function onError(exception: NodeJS.ErrnoException, portNumber: number): void {
   }
 }
 
+/* istanbul ignore next */
 function onListening(server: Server): void {
   const addr = server.address();
 
@@ -52,16 +55,19 @@ function onListening(server: Server): void {
   info(green('Server started on ', addr?.address, addr?.port));
 }
 
+/* istanbul ignore next */
 function elevatedPrivilegesRequired(portNumber: number) {
   error(red(`Using PORT ${portNumber} requires elevated privileges`));
   exit(1);
 }
 
+/* istanbul ignore next */
 function alreadyInUse(portNumber: number) {
   error(red(`PORT ${portNumber} is already in use`));
   exit(1);
 }
 
+/* istanbul ignore next */
 function shutdownServerGracefully(server: Server): void {
   info(magenta('\n-------------\nShutdown Node.js Server gracefully...'));
   server.close(() => info(magenta('...closed')));

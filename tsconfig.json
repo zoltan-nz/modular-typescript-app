@@ -4,7 +4,8 @@
     "module": "commonjs",
     "lib": ["esnext"],
     "declaration": true,
-    "sourceMap": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
     "outDir": "./dist",
     "rootDir": "./src",
     "removeComments": true,
@@ -21,8 +22,8 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "pretty": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "incremental": true
   },
-  "include": ["./src/**/*.ts"],
-  "exclude": ["./src/**/*.test.ts", "./src/**/*.d.ts", "./dist/**"]
+  "exclude": ["dist"]
 }
