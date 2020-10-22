@@ -4,6 +4,8 @@
   "type": "commonjs",
   "description": "Express with TypeScript App Template",
   "main": "dist/bin/run.js",
+  "private": true,
+  "workspaces": ["packages/*", "apps/*"],
   "scripts": {
     "clean": "tsc --build ./tsconfig.json --clean && del ./dist ./.cache ./coverage ./.rpt2_cache ./*.tsbuildinfo",
     "build": "tsc",
@@ -50,6 +52,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-jest": "^25.2.2",
     "jest": "^27.3.1",
+    "lerna": "^4.0.0",
     "nodemon": "^2.0.14",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.4.1",

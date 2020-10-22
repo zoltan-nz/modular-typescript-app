@@ -1,4 +1,7 @@
-# Unit testable Express App template with TypeScript, Jest
+# Modular TypeScript App
+
+## Reading
+- [Lerna](https://github.com/lerna/lerna)
 
 ## Ideas
 
