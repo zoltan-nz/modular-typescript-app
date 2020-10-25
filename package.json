@@ -1,11 +1,14 @@
 {
-  "name": "express-typescript-app",
+  "name": "modular-typescript-app",
   "version": "1.0.0",
   "type": "commonjs",
-  "description": "Express with TypeScript App Template",
+  "description": "A TypeScript project with lerna, microservices",
   "main": "dist/bin/run.js",
   "private": true,
-  "workspaces": ["packages/*", "apps/*"],
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
   "scripts": {
     "clean": "tsc --build ./tsconfig.json --clean && del ./dist ./.cache ./coverage ./.rpt2_cache ./*.tsbuildinfo",
     "build": "tsc",
@@ -25,14 +28,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zoltan-nz/express-typescript-app.git"
+    "url": "git+https://github.com/zoltan-nz/modular-typescript-app.git"
   },
   "author": "Zoltan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zoltan-nz/express-typescript-app/issues"
+    "url": "https://github.com/zoltan-nz/modular-typescript-app/issues"
   },
-  "homepage": "https://github.com/zoltan-nz/express-typescript-app#readme",
+  "homepage": "https://github.com/zoltan-nz/modular-typescript-app#readme",
   "devDependencies": {
     "@types/body-parser": "^1.19.1",
     "@types/cors": "^2.8.12",

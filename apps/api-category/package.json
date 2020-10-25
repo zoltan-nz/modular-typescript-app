@@ -1,0 +1,26 @@
+{
+  "name": "api-category",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Zoltan <zdebre@gmail.com>",
+  "homepage": "https://github.com/zoltan-nz/modular-typescript-app/tree/main/apps/api-category#readme",
+  "license": "ISC",
+  "main": "dist/api-category.js",
+  "directories": {
+    "lib": "dist",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoltan-nz/modular-typescript-app.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/zoltan-nz/modular-typescript-app/issues"
+  }
+}
