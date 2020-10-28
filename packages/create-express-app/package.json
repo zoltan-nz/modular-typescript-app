@@ -1,11 +1,13 @@
 {
-  "name": "api-category",
+  "name": "create-express-app",
   "version": "0.0.0",
   "description": "> TODO: description",
   "author": "Zoltan <zdebre@gmail.com>",
-  "homepage": "https://github.com/zoltan-nz/modular-typescript-app/tree/main/apps/api-category#readme",
+  "homepage": "https://github.com/zoltan-nz/modular-typescript-app/tree/main/packages/create-express-app#readme",
   "license": "ISC",
-  "main": "dist/api-category.js",
+  "main": "dist/create-express-app.js",
+  "module": "dist/create-express-app.module.js",
+  "types": "dist/create-express-app.d.ts",
   "directories": {
     "lib": "dist",
     "test": "__tests__"
@@ -34,8 +36,5 @@
   },
   "bugs": {
     "url": "https://github.com/zoltan-nz/modular-typescript-app/issues"
-  },
-  "dependencies": {
-    "create-express-app": "^0.0.0"
   }
 }

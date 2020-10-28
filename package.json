@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "type": "commonjs",
   "description": "A TypeScript project with lerna, microservices",
-  "main": "dist/bin/run.js",
   "private": true,
   "workspaces": [
     "packages/*",

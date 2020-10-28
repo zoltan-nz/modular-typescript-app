@@ -12,7 +12,7 @@ import listEndpoints from 'express-list-endpoints';
 import { env } from 'process';
 import { addMiddlewares } from '../add-middlewares';
 import { addRoutes } from '../add-routes';
-import { createExpressApp } from '../create-express-app';
+import { createExpressApp } from 'create-express-app';
 import { launchExpressServer } from '../launch-express-server';
 import { Environment } from '../models/environment';
 

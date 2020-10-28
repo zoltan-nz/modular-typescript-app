@@ -1,5 +1,5 @@
-import { createExpressApp } from './create-express-app';
-import { Environment } from './models/environment';
+import { createExpressApp } from '../create-express-app';
+import { Environment } from '../models/environment';
 
 describe('createExpressApp', () => {
   it('should create an express app', () => {

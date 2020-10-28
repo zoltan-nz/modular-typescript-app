@@ -1,6 +1,7 @@
 # Modular TypeScript App
 
 ## Reading
+
 - [Lerna](https://github.com/lerna/lerna)
 
 ## Ideas
