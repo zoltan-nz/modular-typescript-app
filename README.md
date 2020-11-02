@@ -4,6 +4,13 @@
 
 - [Lerna](https://github.com/lerna/lerna)
 
+## GitHub private npm package management
+
+- .npmrc
+- yarn login
+- package.json 
+- scopes
+
 ## Ideas
 
 Let's create a simple backend for a Point of Sales system.
