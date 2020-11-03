@@ -10,6 +10,8 @@
 - yarn login
 - package.json 
 - scopes
+- verdaccio
+- 
 
 ## Ideas
 

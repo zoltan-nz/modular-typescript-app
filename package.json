@@ -8,7 +8,7 @@
     "packages/*"
   ],
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
+    "registry":"http://localhost:4873"
   },
   "scripts": {
     "clean": "tsc --build ./tsconfig.json --clean && del ./dist ./.cache ./coverage ./.rpt2_cache ./*.tsbuildinfo",
