@@ -1,17 +1,21 @@
 # Modular TypeScript App
 
-## Reading
+## Lerna
 
 - [Lerna](https://github.com/lerna/lerna)
+
+```
+lerna publish --force-publish=myFullNpmPackageName --no-git-tag-version --no-push
+```
 
 ## GitHub private npm package management
 
 - .npmrc
 - yarn login
-- package.json 
+- package.json
 - scopes
 - verdaccio
-- 
+-
 
 ## Ideas
 

@@ -2,9 +2,8 @@
   "name": "@my-org/create-express-app",
   "version": "0.0.0",
   "description": "> TODO: description",
-  "author": "Zoltan <zdebre@gmail.com>",
   "homepage": "https://github.com/zoltan-nz/modular-typescript-app/tree/main/packages/create-express-app#readme",
-  "license": "ISC",
+  "license": "MIT",
   "main": "dist/create-express-app.js",
   "module": "dist/create-express-app.module.js",
   "types": "dist/create-express-app.d.ts",
@@ -18,9 +17,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zoltan-nz/modular-typescript-app.git"
-  },
-  "publishConfig": {
-    "registry":"http://localhost:4873"
   },
   "scripts": {
     "clean": "tsc --build ./tsconfig.json --clean && del ./dist ./.cache ./coverage ./.rpt2_cache ./*.tsbuildinfo",

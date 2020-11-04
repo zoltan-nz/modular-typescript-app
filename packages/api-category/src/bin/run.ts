@@ -10,7 +10,7 @@
 import errorhandler from 'errorhandler';
 import listEndpoints from 'express-list-endpoints';
 import { env } from 'process';
-import { createExpressApp } from "@my-org/create-express-app";
+import { createExpressApp } from '@my-org/create-express-app';
 import { addMiddlewares } from '../add-middlewares';
 import { addRoutes } from '../add-routes';
 import { launchExpressServer } from '../launch-express-server';
