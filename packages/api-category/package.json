@@ -1,5 +1,5 @@
 {
-  "name": "@my-org/api-category",
+  "name": "@localhost/api-category",
   "version": "0.0.0",
   "description": "> TODO: description",
   "homepage": "https://github.com/zoltan-nz/modular-typescript-app/tree/main/apps/api-category#readme",
@@ -19,6 +19,9 @@
   "bugs": {
     "url": "https://github.com/zoltan-nz/modular-typescript-app/issues"
   },
+  "publishConfig": {
+    "@localhost": "http://localhost:4873"
+  },
   "scripts": {
     "clean": "tsc --build ./tsconfig.json --clean && del ./dist ./.cache ./coverage ./.rpt2_cache ./*.tsbuildinfo",
     "build": "tsc",
@@ -35,6 +38,7 @@
     "start": "run-s clean build server"
   },
   "dependencies": {
-    "@my-org/create-express-app": "^0.0.0"
-  }
+    "@localhost/create-express-app": "^0.0.0"
+  },
+  "gitHead": "edc5b7c96598e8cc850e9fd593a1e157e1ea09c2"
 }

@@ -1,5 +1,5 @@
 {
-  "name": "@my-org/create-express-app",
+  "name": "@localhost/create-express-app",
   "version": "0.0.0",
   "description": "> TODO: description",
   "homepage": "https://github.com/zoltan-nz/modular-typescript-app/tree/main/packages/create-express-app#readme",
@@ -18,6 +18,9 @@
     "type": "git",
     "url": "git+https://github.com/zoltan-nz/modular-typescript-app.git"
   },
+  "publishConfig": {
+    "@localhost": "http://localhost:4873/"
+  },
   "scripts": {
     "clean": "tsc --build ./tsconfig.json --clean && del ./dist ./.cache ./coverage ./.rpt2_cache ./*.tsbuildinfo",
     "build": "tsc",
@@ -35,5 +38,6 @@
   },
   "bugs": {
     "url": "https://github.com/zoltan-nz/modular-typescript-app/issues"
-  }
+  },
+  "gitHead": "edc5b7c96598e8cc850e9fd593a1e157e1ea09c2"
 }

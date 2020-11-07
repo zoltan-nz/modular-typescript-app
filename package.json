@@ -1,5 +1,5 @@
 {
-  "name": "modular-typescript-app",
+  "name": "@localhost/modular-typescript-app",
   "version": "1.0.0",
   "type": "commonjs",
   "description": "A TypeScript project with lerna, microservices",

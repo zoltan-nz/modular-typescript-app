@@ -1,5 +1,9 @@
 # Modular TypeScript App
 
+## Development
+
+1. Launch local `verdaccio` server.
+
 ## Lerna
 
 - [Lerna](https://github.com/lerna/lerna)
@@ -15,7 +19,6 @@ lerna publish --force-publish=myFullNpmPackageName --no-git-tag-version --no-pus
 - package.json
 - scopes
 - verdaccio
--
 
 ## Ideas
 
