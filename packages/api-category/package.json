@@ -38,7 +38,7 @@
     "start": "run-s clean build server"
   },
   "dependencies": {
-    "@localhost/create-express-app": "^0.0.0"
+    "@localhost/express-application": "^0.0.0"
   },
   "gitHead": "edc5b7c96598e8cc850e9fd593a1e157e1ea09c2"
 }

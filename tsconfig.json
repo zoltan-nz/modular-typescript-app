@@ -20,6 +20,7 @@
     "forceConsistentCasingInFileNames": true,
     "pretty": true,
     "resolveJsonModule": true,
-    "incremental": true
+    "incremental": true,
+    "noEmit": true
   }
 }

@@ -1,16 +1,13 @@
 module.exports = {
-  root: true,
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'jest'],
+  env: {
+    commonjs: true,
+    es2021: true,
+    jest: true
+  },
   extends: [
     'eslint:recommended',
-    'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:@typescript-eslint/recommended',
     'prettier',
+    'plugin:node/recommended'
+
   ],
-  env: {
-    'jest/globals': true,
-    node: true,
-    es2017: true,
-  },
-};
+}

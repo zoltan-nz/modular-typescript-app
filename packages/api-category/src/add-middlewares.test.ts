@@ -3,7 +3,7 @@ import request from 'supertest';
 import { addMiddlewares } from './add-middlewares';
 
 describe('addMiddlewares', () => {
-  test('app can parse json body', async () => {
+  test('expressApp can parse json body', async () => {
     const app = express();
     addMiddlewares(app);
     app.post('/', (req, res) => res.json(req.body));
