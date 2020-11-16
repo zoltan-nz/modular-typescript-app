@@ -1,4 +1,3 @@
-
 /**
  * Command line tool for creating an app, setting up routes, and launching a server.
  *

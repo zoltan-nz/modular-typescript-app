@@ -50,7 +50,6 @@ Endpoints:
 
 There is many-to-many relation between category and product.
 
-
 ## Lintint TypeScript with ESLint
 
 - [Linting your TypeScript Codebase](https://typescript-eslint.io/docs/linting/linting)
