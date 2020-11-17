@@ -38,7 +38,11 @@
     "start": "run-s clean build server"
   },
   "dependencies": {
-    "@localhost/express-application": "^0.0.0"
+    "@localhost/express-application": "^0.0.0",
+    "express": "^4.17.1"
   },
-  "gitHead": "edc5b7c96598e8cc850e9fd593a1e157e1ea09c2"
+  "gitHead": "edc5b7c96598e8cc850e9fd593a1e157e1ea09c2",
+  "devDependencies": {
+    "@types/express": "^4.17.13"
+  }
 }
