@@ -1,10 +1,6 @@
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaVersion: 2021,
-    sourceType: 'module',
-  },
   env: {
     es2021: true,
     jest: true,
@@ -22,9 +18,6 @@ module.exports = {
   settings: {
     node: {
       tryExtensions: ['.js', '.json', '.ts', '.tsx'],
-    },
-    'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
   },
   rules: {

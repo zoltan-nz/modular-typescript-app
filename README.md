@@ -53,3 +53,32 @@ There is many-to-many relation between category and product.
 ## Lintint TypeScript with ESLint
 
 - [Linting your TypeScript Codebase](https://typescript-eslint.io/docs/linting/linting)
+
+Install the following packages:
+
+```
+    "@typescript-eslint/eslint-plugin"
+    "@typescript-eslint/parser"
+    "eslint"
+    "eslint-config-prettier"
+    "eslint-import-resolver-typescript"
+    "eslint-plugin-eslint-comments"
+    "eslint-plugin-import"
+    "eslint-plugin-jest"
+    "eslint-plugin-node"
+```
+
+```
+yarn add -D \
+    "@typescript-eslint/eslint-plugin" \
+    "@typescript-eslint/parser" \
+    "eslint" \
+    "eslint-config-prettier" \
+    "eslint-import-resolver-typescript" \
+    "eslint-plugin-eslint-comments" \
+    "eslint-plugin-import" \
+    "eslint-plugin-jest" \
+    "eslint-plugin-node"
+```
+
+Check out [`.eslintrc.js`](./.eslintrc.js) file.
