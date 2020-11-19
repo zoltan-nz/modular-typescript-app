@@ -82,3 +82,7 @@ yarn add -D \
 ```
 
 Check out [`.eslintrc.js`](./.eslintrc.js) file.
+
+## ts-node-dev
+
+Using for development, automatically restart server on file changes.
