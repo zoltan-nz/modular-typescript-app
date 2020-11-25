@@ -27,14 +27,8 @@
     "build:watch": "tsc --watch",
     "test": "jest --colors --coverage --detectOpenHandles",
     "test:watch": "CI=true jest --colors --watch --detectOpenHandles",
-    "test:compiled": "jest --colors --config ./jest.config.compiled.js",
     "lint": "eslint . --fix",
-    "lint:watch": "chokidar ./**/*.ts --initial --silent -c 'run-s lint'",
-    "server": "node ./dist/bin/run.js",
-    "server:watch": "nodemon -w ./ -x run-s server",
-    "debug": "NODE_ENV=development DEBUG=* ts-node --inspect-brk ./src/bin/run.ts",
-    "dev": "run-s clean build && concurrently --names 'BUILD,TEST,LINT,SERVER' -c 'yellow,cyan,blue,magenta' 'run-s build:watch' 'run-s test:watch' 'run-s lint:watch' 'run-s server:watch'",
-    "start": "run-s clean build server"
+    "lint:watch": "chokidar ./**/*.ts --initial --silent -c 'run-s lint'"
   },
   "bugs": {
     "url": "https://github.com/zoltan-nz/modular-typescript-app/issues"
