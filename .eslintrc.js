@@ -13,12 +13,13 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:jest/recommended',
     'plugin:import/recommended',
+    'plugin:import/typescript',
     'plugin:node/recommended',
   ],
   settings: {
     node: {
       tryExtensions: ['.js', '.json', '.ts', '.tsx'],
-    },
+    }
   },
   rules: {
     'node/no-unsupported-features/es-syntax': ['error', { ignores: ['modules'] }],

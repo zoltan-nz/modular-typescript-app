@@ -1,18 +1,14 @@
 module.exports = {
-  maxWorkers: '1',
   preset: 'ts-jest',
+  maxWorkers: '1',
   testEnvironment: 'node',
   globals: {
     'ts-jest': {
-      isolatedModules: true,
-      tsconfig: 'tsconfig.json',
+      isolatedModules: true
     },
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   testMatch: ['**/*.test.ts'],
-  transform: {
-    '^.+\\.tsx?$': 'ts-jest',
-  },
   verbose: true,
   automock: false,
   notify: false,

@@ -4,9 +4,9 @@
   "description": "> TODO: description",
   "homepage": "https://github.com/zoltan-nz/modular-typescript-app/tree/main/packages/create-express-app#readme",
   "license": "MIT",
-  "main": "dist/create-express-app.js",
-  "module": "dist/create-express-app.module.js",
-  "types": "dist/create-express-app.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.module.js",
+  "types": "dist/index.d.ts",
   "directories": {
     "lib": "dist",
     "test": "__tests__"
@@ -35,9 +35,15 @@
   },
   "gitHead": "edc5b7c96598e8cc850e9fd593a1e157e1ea09c2",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "@types/express": "^4.17.13"
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/express-list-endpoints": "^6.0.0",
+    "@types/supertest": "^2.0.11",
+    "express-list-endpoints": "^6.0.0",
+    "supertest": "^6.1.6"
   }
 }

@@ -1,11 +1,12 @@
-import express, { Application } from 'express';
+import cors from 'cors';
+import express, { Express, Router } from 'express';
 import { Server } from 'http';
 import { Environment } from './models/environment';
 
 const DEFAULT_PORT = 3000;
 
 export class ExpressApplication {
-  readonly #expressApp: Application;
+  readonly #expressApp: Express;
   readonly #environment: Environment;
   readonly #port: number;
 
@@ -26,11 +27,12 @@ export class ExpressApplication {
   #init(): void {
     this.#expressApp.use(express.json());
     this.#expressApp.use(express.urlencoded({ extended: true }));
+    this.#expressApp.use(cors());
     this.#expressApp.set('env', this.#environment);
     this.#expressApp.disable('x-powered-by');
   }
 
-  public get expressApp(): Application {
+  public get expressApp(): Express {
     return this.#expressApp;
   }
 
@@ -44,6 +46,12 @@ export class ExpressApplication {
 
   public get server(): Server | undefined {
     return this.#server;
+  }
+
+  public addRouters(routers: Router[]): void {
+    routers.forEach(router => {
+      this.#expressApp.use(router);
+    });
   }
 
   public start(): void {
