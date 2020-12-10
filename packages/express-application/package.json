@@ -4,15 +4,14 @@
   "description": "> TODO: description",
   "homepage": "https://github.com/zoltan-nz/modular-typescript-app/tree/main/packages/create-express-app#readme",
   "license": "MIT",
-  "main": "dist/index.js",
-  "module": "dist/index.module.js",
-  "types": "dist/index.d.ts",
+  "main": "src/index.ts",
+  "module": "src/index.ts",
+  "types": "src/index.ts",
   "directories": {
-    "lib": "dist",
-    "test": "__tests__"
+    "src": "src"
   },
   "files": [
-    "dist"
+    "src"
   ],
   "repository": {
     "type": "git",
@@ -22,9 +21,10 @@
     "@localhost": "http://localhost:4873/"
   },
   "scripts": {
+    "dev": "run-s clean && run-p -l -n build:watch test:watch lint:watch",
     "clean": "tsc --build ./tsconfig.json --clean && del ./dist ./.cache ./coverage ./.rpt2_cache ./*.tsbuildinfo",
     "build": "tsc",
-    "build:watch": "tsc --watch",
+    "build:watch": "tsc --watch --preserveWatchOutput",
     "test": "jest --colors --coverage --detectOpenHandles",
     "test:watch": "CI=true jest --colors --watch --detectOpenHandles",
     "lint": "eslint . --fix",
@@ -44,6 +44,7 @@
     "@types/express-list-endpoints": "^6.0.0",
     "@types/supertest": "^2.0.11",
     "express-list-endpoints": "^6.0.0",
+    "npm-run-all": "^4.1.5",
     "supertest": "^6.1.6"
   }
 }

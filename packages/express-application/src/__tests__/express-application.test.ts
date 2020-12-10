@@ -23,7 +23,7 @@ describe('Express Application', () => {
 
   it('should throw an error when non supported environment is used', () => {
     expect(() => {
-      const env: Environment = ('not-supported-env' as Environment);
+      const env: Environment = 'not-supported-env' as Environment;
       new ExpressApplication(env);
     }).toThrow('NODE_ENV value is not supported, must have: test,development,staging,production');
   });

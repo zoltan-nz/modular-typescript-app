@@ -48,6 +48,14 @@ Endpoints:
   DELETE
 ```
 
+- Schools
+- Teachers
+
+Hierarchy:
+
+- Teachers belongs to Schools
+- Teachers management hierarchy
+
 There is many-to-many relation between category and product.
 
 ## Lintint TypeScript with ESLint
@@ -86,3 +94,15 @@ Check out [`.eslintrc.js`](./.eslintrc.js) file.
 ## ts-node-dev
 
 Using for development, automatically restart server on file changes.
+
+## Developer Experience
+
+`yarn dev` in the root directory will start:
+
+1. linter in each project in watch mode
+2. test in each project in watch mode
+3. lib transpilation or server in each project in watch mode
+
+Library transpilation can be done with tsc --watch --preserveWatchOutput
+
+Express server can be launched with ts-node-dev

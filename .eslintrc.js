@@ -19,7 +19,7 @@ module.exports = {
   settings: {
     node: {
       tryExtensions: ['.js', '.json', '.ts', '.tsx'],
-    }
+    },
   },
   rules: {
     'node/no-unsupported-features/es-syntax': ['error', { ignores: ['modules'] }],
