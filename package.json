@@ -11,10 +11,11 @@
     "node": ">=14"
   },
   "scripts": {
-    "dev": "lerna run dev --stream",
-    "test": "jest  --coverage --runInBand",
-    "test:watch": "jest --watch",
-    "lint": "eslint . --fix",
+    "clean": "del ./coverage yarn-error.log .eslintcache ./**/coverage ./**/tsconfig.tsbuildinfo ./**/dist",
+    "dev": "run-p test:watch lint:watch",
+    "test": "jest --coverage --runInBand",
+    "test:watch": "CI=true jest --watch --runInBand",
+    "lint": "eslint . --fix --cache",
     "lint:watch": "chokidar ./**/*.ts --initial --silent -c 'run-s lint'",
     "format": "prettier --list-different --write '**/*.{ts,tsx,js,jsx,json,md,html}'",
     "format:check": "prettier --list-different --check '**/*.{ts,tsx,js,jsx,json,md,html}'"

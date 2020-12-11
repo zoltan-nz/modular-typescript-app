@@ -19,6 +19,7 @@ module.exports = {
   settings: {
     node: {
       tryExtensions: ['.js', '.json', '.ts', '.tsx'],
+      version: '>=12',
     },
   },
   rules: {

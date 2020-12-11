@@ -20,16 +20,6 @@
   "publishConfig": {
     "@localhost": "http://localhost:4873/"
   },
-  "scripts": {
-    "dev": "run-s clean && run-p -l -n build:watch test:watch lint:watch",
-    "clean": "tsc --build ./tsconfig.json --clean && del ./dist ./.cache ./coverage ./.rpt2_cache ./*.tsbuildinfo",
-    "build": "tsc",
-    "build:watch": "tsc --watch --preserveWatchOutput",
-    "test": "jest --colors --coverage --detectOpenHandles",
-    "test:watch": "CI=true jest --colors --watch --detectOpenHandles",
-    "lint": "eslint . --fix",
-    "lint:watch": "chokidar ./**/*.ts --initial --silent -c 'run-s lint'"
-  },
   "bugs": {
     "url": "https://github.com/zoltan-nz/modular-typescript-app/issues"
   },
