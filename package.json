@@ -12,7 +12,8 @@
   },
   "scripts": {
     "clean": "del ./coverage yarn-error.log .eslintcache ./**/coverage ./**/tsconfig.tsbuildinfo ./**/dist",
-    "dev": "run-p test:watch lint:watch",
+    "dev": "run-p test:watch lint:watch serve:all",
+    "serve:all": "lerna run --parallel --stream serve",
     "test": "jest --coverage --runInBand",
     "test:watch": "CI=true jest --watch --runInBand",
     "lint": "eslint . --fix --cache",

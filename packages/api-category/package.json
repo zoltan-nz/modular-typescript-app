@@ -41,5 +41,8 @@
     "@types/supertest": "^2.0.11",
     "supertest": "^6.1.6"
   },
+  "scripts": {
+    "serve": "ts-node-dev src/bin/api-category.ts"
+  },
   "gitHead": "edc5b7c96598e8cc850e9fd593a1e157e1ea09c2"
 }

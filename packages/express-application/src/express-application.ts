@@ -6,18 +6,20 @@ import { Environment } from './models/environment';
 const DEFAULT_PORT = 3000;
 
 export class ExpressApplication {
+  readonly #name: string;
   readonly #expressApp: Express;
   readonly #environment: Environment;
   readonly #port: number;
 
   #server: Server | undefined;
 
-  constructor(environment: Environment, port = DEFAULT_PORT) {
+  constructor(environment: Environment, name: string, port = DEFAULT_PORT) {
     if (!Object.keys(Environment).includes(environment)) {
       throw Error(`NODE_ENV value is not supported, must have: ${Object.keys(Environment)}`);
     }
 
     this.#environment = environment;
+    this.#name = name;
     this.#port = port;
     this.#expressApp = express();
 
@@ -57,7 +59,7 @@ export class ExpressApplication {
   public start(): void {
     try {
       this.#server = this.#expressApp.listen(this.#port, () => {
-        console.log(`Express server listening on port ${this.#port}`);
+        console.log(`${this.#name} - express server listening on port ${this.#port}`);
       });
     } catch (error) {
       console.error(error);
