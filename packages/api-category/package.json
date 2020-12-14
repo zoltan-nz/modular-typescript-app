@@ -45,7 +45,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "serve": "ts-node-dev src/bin/api-category.ts"
+    "serve": "ts-node-dev src/bin/api-category.ts watch ./src/**/*.*"
   },
   "gitHead": "edc5b7c96598e8cc850e9fd593a1e157e1ea09c2"
 }

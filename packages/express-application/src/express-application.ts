@@ -1,7 +1,7 @@
-import 'reflect-metadata';
 import cors from 'cors';
 import express, { Express, Router } from 'express';
 import { Server } from 'http';
+import 'reflect-metadata';
 import { Environment } from './models/environment';
 
 const DEFAULT_PORT = 3000;

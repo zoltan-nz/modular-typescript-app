@@ -112,9 +112,9 @@ Express server can be launched with ts-node-dev
 DI for injecting global services into smaller components and also inject services into dedicated routes and controllers.
 
 Main injectable services:
+
 - Database
 - Cache
 - Logger
 - Config
 - EventBus
-
