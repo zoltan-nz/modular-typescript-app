@@ -1,6 +1,10 @@
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
+  parserOptions: {
+      tsconfigRootDir: __dirname,
+      project: ['./tsconfig.json', './packages/*/tsconfig.json'],
+},
   env: {
     es2021: true,
     jest: true,
@@ -24,5 +28,8 @@ module.exports = {
   },
   rules: {
     'node/no-unsupported-features/es-syntax': ['error', { ignores: ['modules'] }],
+    '@typescript-eslint/ban-ts-comment': 'off',
+    '@typescript-eslint/array-type': ['error', { default: 'array' }],
+    '@typescript-eslint/class-literal-property-style': ['error', 'fields'],
   },
 };

@@ -32,7 +32,9 @@
     "cors": "^2.8.5",
     "errorhandler": "^1.5.1",
     "express": "^4.17.1",
-    "express-list-endpoints": "^6.0.0"
+    "express-list-endpoints": "^6.0.0",
+    "reflect-metadata": "^0.1.13",
+    "tsyringe": "^4.6.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.12",
@@ -42,6 +44,7 @@
     "supertest": "^6.1.6"
   },
   "scripts": {
+    "build": "tsc",
     "serve": "ts-node-dev src/bin/api-category.ts"
   },
   "gitHead": "edc5b7c96598e8cc850e9fd593a1e157e1ea09c2"

@@ -106,3 +106,15 @@ Using for development, automatically restart server on file changes.
 Library transpilation can be done with tsc --watch --preserveWatchOutput
 
 Express server can be launched with ts-node-dev
+
+## Dependency Injection
+
+DI for injecting global services into smaller components and also inject services into dedicated routes and controllers.
+
+Main injectable services:
+- Database
+- Cache
+- Logger
+- Config
+- EventBus
+

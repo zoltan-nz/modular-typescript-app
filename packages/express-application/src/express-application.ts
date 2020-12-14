@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import cors from 'cors';
 import express, { Express, Router } from 'express';
 import { Server } from 'http';

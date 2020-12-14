@@ -4,32 +4,34 @@ import request from 'supertest';
 import { ExpressApplication } from '../express-application';
 import { Environment } from '../models/environment';
 
+const APP_NAME = 'express-application-test';
+
 describe('Express Application', () => {
   it('should create an Express app', () => {
-    const app = new ExpressApplication(Environment.development);
+    const app = new ExpressApplication(Environment.development, APP_NAME);
     expect(app).toBeDefined();
     expect(app.expressApp.get('env')).toEqual('development');
   });
 
   it('should setup the environment variable', () => {
-    const app = new ExpressApplication(Environment.production);
+    const app = new ExpressApplication(Environment.production, APP_NAME);
     expect(app.expressApp.get('env')).toEqual('production');
   });
 
   it('should hide the x-powered-by header', () => {
-    const app = new ExpressApplication(Environment.test);
+    const app = new ExpressApplication(Environment.test, APP_NAME);
     expect(app.expressApp.get('x-powered-by')).toEqual(false);
   });
 
   it('should throw an error when non supported environment is used', () => {
     expect(() => {
       const env: Environment = 'not-supported-env' as Environment;
-      new ExpressApplication(env);
+      new ExpressApplication(env, APP_NAME);
     }).toThrow('NODE_ENV value is not supported, must have: test,development,staging,production');
   });
 
   test('expressApp can parse json body', async () => {
-    const app = new ExpressApplication(Environment.test);
+    const app = new ExpressApplication(Environment.test, APP_NAME);
     app.expressApp.post('/', (req, res) => res.json(req.body));
 
     const response = await request(app.expressApp).post('/').send({ dummy: 'test object' });
@@ -45,7 +47,7 @@ describe('Express Application', () => {
     router1.get('/test1', jest.fn());
     router2.post('/test2', jest.fn());
 
-    const app = new ExpressApplication(Environment.test);
+    const app = new ExpressApplication(Environment.test, APP_NAME);
     app.addRouters([router1, router2]);
 
     expect(listEndpoints(app.expressApp)).toEqual([
