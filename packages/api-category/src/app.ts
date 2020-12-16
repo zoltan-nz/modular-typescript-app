@@ -5,6 +5,7 @@ import { Router } from 'express';
 import { autoInjectable } from 'tsyringe';
 // @ts-ignore
 import { name } from '../package.json';
+import { CategoryController } from './category-controller';
 import { Logger } from './services/logger';
 
 @autoInjectable()
