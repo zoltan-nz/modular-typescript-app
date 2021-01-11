@@ -13,4 +13,5 @@ module.exports = {
   automock: false,
   notify: false,
   collectCoverage: true,
+  setupFiles: ['./jest.setup.ts'],
 };

@@ -21,6 +21,7 @@
     "pretty": true,
     "resolveJsonModule": true,
     "incremental": true,
-    "noEmit": true
+    "noEmit": true,
+    "isolatedModules": true
   }
 }
